@@ -529,6 +529,6 @@ export default class MysqlDriver extends AbstractDriver {
         if (dataType === "set") {
             return `() => ['${defaultValue.split(",").join("','")}']`;
         }
-        return `() => "'${defaultValue}'"`;
+        return `() => \`'${defaultValue}'\``;
     }
 }
